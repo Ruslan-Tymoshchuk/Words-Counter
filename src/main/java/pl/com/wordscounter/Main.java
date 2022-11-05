@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         WordsCounter wordsCounter = new WordsCounter(); 
         while(scanner.hasNext()) {
-        System.out.println(wordsCounter.countMaxAmountWordsInText(scanner.nextLine()));
+        System.out.println(wordsCounter.countMaxAmountWords(scanner.nextLine()));
         }
         scanner.close();
     }

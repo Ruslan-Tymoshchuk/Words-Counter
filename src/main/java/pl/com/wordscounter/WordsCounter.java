@@ -8,10 +8,13 @@ import java.util.List;
 
 public class WordsCounter {
 
-    public int countMaxAmountWordsInText(String text) {
+    public int countMaxAmountWords(String text) {
         List<Integer> amountWords = new ArrayList<>();
         for (String sentence : Arrays.asList(text.split("[.?!]"))) {
             amountWords.add(countAmountWords(asList(sentence.split(" "))));
+        }
+        if (amountWords.isEmpty()) {
+            return 0;
         }
         return max(amountWords);
     }
